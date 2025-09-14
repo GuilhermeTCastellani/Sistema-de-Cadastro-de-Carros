@@ -11,7 +11,6 @@ public class CadastroVeiculos {
         scanner = new Scanner(System.in);
     }
 
-    // ---------- Menu ----------
     public void iniciar() {
         int opcao;
         do {
@@ -54,11 +53,10 @@ public class CadastroVeiculos {
             scanner.next();
         }
         int opcao = scanner.nextInt();
-        scanner.nextLine(); // consumir quebra de linha
+        scanner.nextLine();
         return opcao;
     }
 
-    // ---------- Cadastro ----------
     private void cadastrarVeiculo() {
         System.out.print("Marca: ");
         String marca = scanner.nextLine();
@@ -90,7 +88,6 @@ public class CadastroVeiculos {
         pausa();
     }
 
-    // ---------- Listagem ----------
     private void listarVeiculos() {
         if (veiculos.isEmpty()) {
             System.out.println("Nenhum veículo cadastrado.");
@@ -101,7 +98,6 @@ public class CadastroVeiculos {
         pausa();
     }
 
-    // ---------- Exclusão ----------
     private void excluirVeiculo() {
         if (veiculos.isEmpty()) {
             System.out.println("Nenhum veículo cadastrado.");
@@ -120,7 +116,6 @@ public class CadastroVeiculos {
         pausa();
     }
 
-    // ---------- Pesquisa ----------
     private void pesquisarVeiculo() {
         if (veiculos.isEmpty()) {
             System.out.println("Nenhum veículo cadastrado.");
@@ -158,7 +153,6 @@ public class CadastroVeiculos {
         pausa();
     }
 
-    // ---------- Utilitários ----------
     private boolean existePlaca(String placa) {
         return veiculos.stream().anyMatch(v -> v.getPlaca().equalsIgnoreCase(placa));
     }
@@ -173,7 +167,6 @@ public class CadastroVeiculos {
         scanner.nextLine();
     }
 
-    // ---------- Main ----------
     public static void main(String[] args) {
         new CadastroVeiculos().iniciar();
     }

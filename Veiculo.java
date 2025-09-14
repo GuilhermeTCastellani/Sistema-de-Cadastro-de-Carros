@@ -3,13 +3,8 @@ public class Veiculo {
     private String modelo;
     private String placa;
     private int ano;
-   
-
-    // Construtor default
     public Veiculo() {
     }
-
-    // Construtor completo
     public Veiculo(String marca, String modelo, int ano, String placa) {
         this.marca = marca;
         this.modelo = modelo;
@@ -17,7 +12,6 @@ public class Veiculo {
         this.placa = placa;
     }
 
-    // Getters e Setters
     public String getMarca() {
         return marca;
     }
@@ -49,8 +43,7 @@ public class Veiculo {
     public void setPlaca(String placa) {
         this.placa = placa;
     }
-
-    // toString para imprimir formatado
+    
     @Override
     public String toString() {
         return "Veículo Marca: " + marca +
